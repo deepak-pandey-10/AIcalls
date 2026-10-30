@@ -24,6 +24,10 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+const leadRoutes = require("./routes/lead.routes");
+
+app.use("/api/leads", leadRoutes);
+
 app.listen(PORT, () => {
   console.log(`VoiceReach AI API running at http://localhost:${PORT}`);
 });
